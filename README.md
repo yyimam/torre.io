@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Project
+
+This is a **Next.js** frontend project using **React** and **TailwindCSS**.
+
+---
+
+## Project Version
+
+```
+0.1.0
+```
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### 1. Install Dependencies
+
+Make sure you have **Node.js** installed, then run:
+
+```bash
+npm install
+```
+
+This will install all required dependencies listed in `package.json`.
+
+### 2. Run the Project
+
+After installing dependencies, start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The project will run at http://localhost:3000 by default.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Other Useful Commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Build for production:**
+  ```bash
+  npm run build
+  ```
 
-## Learn More
+- **Start production server:**
+  ```bash
+  npm start
+  ```
 
-To learn more about Next.js, take a look at the following resources:
+- **Lint your code:**
+  ```bash
+  npm run lint
+  ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Environment Variables
 
-## Deploy on Vercel
+Create a `.env` file in the root of the project:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+NEXT_PUBLIC_API_URL="https://torre.ai/api"
+NEXT_PUBLIC_SEARCH_API_URL="https://search.torre.co"
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+These are used for API requests in the frontend.
+
+---
+
+## Building for Production
+
+To build the project for production deployment:
+
+1. Run the build command:
+   ```bash
+   npm run build
+   ```
+
+2. This will create an optimized production build in the `.next` folder.
+
+3. To test the production build locally:
+   ```bash
+   npm start
+   ```
